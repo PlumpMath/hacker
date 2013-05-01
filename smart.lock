@@ -1,0 +1,25 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master",
+    "commit": "bfe4b72ebec4367eaddcdf0887fcf5e649d9dcb8"
+  },
+  "dependencies": {
+    "basePackages": {
+      "ng": {},
+      "blade": {}
+    },
+    "packages": {
+      "ng": {
+        "git": "https://github.com/olanod/ng-meteor.git",
+        "tag": "v0.1.1",
+        "commit": "d8401f51e439dd726473acc59dd0ae0ccf884b6c"
+      },
+      "blade": {
+        "git": "https://github.com/bminer/meteor-blade.git",
+        "tag": "v3.2.6meteor1",
+        "commit": "f0810fd031781c84a9b5a14fd84c5b9d060ab336"
+      }
+    }
+  }
+}

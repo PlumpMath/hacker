@@ -1,0 +1,10 @@
+.landing(ng-controller="LandingCtrl")
+  h1.landing-header welcome hacker
+    
+  form.landing-form(method="post", novalidate)
+    .field
+      label.landing-label(for="user") >
+      input.landing-input#user(name="username", type="text", placeholder="identify yourself", required)
+    .field
+      label.landing-label(for="passphrase") >
+      input.landing-input#passphrase(name="password", type="password", placeholder="choose passphrase",ng-model="passphrase", password-validate, required)
