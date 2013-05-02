@@ -5,6 +5,9 @@ app = angular.module 'hackerApp', ['ngMeteor'], ['$routeProvider', '$locationPro
   $routeProvider.when '/landing',
     templateUrl: 'landing.blade',
     controller: 'LandingCtrl'
+  $routeProvider.when '/signup',
+    templateUrl: 'signup.blade',
+    controller: 'SignupCtrl'
   $routeProvider.otherwise redirectTo: '/landing'
   $locationProvider.html5Mode true
 ]

@@ -1,0 +1,30 @@
+.signup
+  padding: 2em
+
+.field
+  position: relative
+  display: block
+
+.signup-label
+  position: absolute
+  left: 0
+  margin-top: 10px
+  font-size: 4em
+  opacity: 0.7
+  color: rgba(0,0,200,0.35)
+
+.signup-input
+  border: none
+  width: 80%
+  font-family: monospace
+  font-size: 5em
+  position: relative
+  margin-left: 5%
+  
+  &:focus
+     outline: none
+
+  &.ng-invalid.ng-dirty
+    background: rgba(255,0,0,0.1)
+  &.ng-valid
+    background: rgba(0,255,0,0.1)

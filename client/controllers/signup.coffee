@@ -1,0 +1,1 @@
+angular.module('ngMeteor').controller 'SignupCtrl', ($scope) ->
