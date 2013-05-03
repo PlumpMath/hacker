@@ -3,7 +3,10 @@
 
     header.main-header
       a.nav-link.root(href="/") root
-      a.nav-link(href="#") login
+      - if (locals.user)
+        a.nav-link(href="#") #{locals.user}
+      - else
+        a.nav-link(href="/login") login
 
     .wrapper(ng-view)
 
