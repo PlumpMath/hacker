@@ -1,8 +1,11 @@
 #container
   .container
-    header.main_header
-    
+
+    header.main-header
+      a.nav-link.root(href="/") root
+      a.nav-link(href="/login") login
+
     .wrapper(ng-view)
 
-  footer
+  footer.main-footer
     a.me(href="http://polyrhythm.github.io", target="_blank") polyrhythm

@@ -1,26 +1,48 @@
+@import nib
+
 #container
   position: relative
   width: 100%
   background: white
   height: auto !important
   min-height: 100%
+  box-shadow: rgba(50,50,50,0.6) 0 0 10px inset
 
 .container
-  padding: 0 0 7em 0 
+  padding: 0 0 7em 0
 
-footer
+// header
+.main-header
+  height: 50px
+  background: rgba(0,0,255,0.1)
+
+  .nav-link
+    float: right
+    line-height: 48px
+    color: black
+    font-size: 2em
+    font-family: monospace
+    margin-right: 20px
+    &:hover
+      background: rgba(100,100,100,0.1)
+
+    &.root
+      float: left
+      margin-left: 10px
+      font-weight: bold
+
+.main-footer
   width: 100%
   position: absolute
   bottom: 0
-  border-top: 8px double white
+  border-top: 8px double rgba(255,255,255,0.8)
   background: black
   height: 100px
-    
+
 .me
   float: right
   margin-right: 2em
   line-height: 100px
-  text-decoration: none
   color: white
   &:hover
     text-decoration: underline

@@ -1,18 +1,29 @@
-@import nib
-
 .landing
   padding: 2em
 
 .landing-header
-  font-family: "Signika+Negative", serif
   font-weight: 700
   font-size: 8em
   position: relative
   color: rgba(0,0,200,0.35)
 
   &:after
-    content: 'welcome hacker'
+    content: 'welcome, hacker'
     position: absolute
     left: 9px
     top: 4px
     color: rgba(200,0,0,0.35)
+
+.landing-nav
+  font-size: 3em
+  margin: 20px 0 0 20px
+  font-family: monospace
+  color: black
+  display: inline-block
+  width: 100%
+  max-width: 900px
+  padding: 10px
+  background: rgba(50,50,50,0.1)
+  margin-top: 40px
+  &:hover
+    background: rgba(0,255,0,0.1) 
