@@ -12,4 +12,3 @@ angular.module('ngMeteor').directive 'passwordValidate', ->
       else
         ctrl.$setValidity 'pwd', false
         return undefined
-        
