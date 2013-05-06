@@ -1,14 +1,8 @@
-if Meteor.isClient
-  Meteor.startup ->
-    # give the layout the current user
-    Template.body.user = ->
-      if Meteor.user()
-        console.log 'loggingIn'
-        if ! Meteor.loggingIn()
-          console.log 'logged in'
-          return Meteor.user().username
-      console.log 'nope'
+Meteor.startup ->
+  cb = ->
+    Template.body.hacker =
+      if Meteor.user() && ! Meteor.loggingIn()
+        console.log 'logged in'
+        Meteor.user().username
 
-    # bootstrap angular
-    angular.element(document).ready ->
-      angular.bootstrap document, ['hackerApp']
+  Meteor.setTimeout cb, 200
