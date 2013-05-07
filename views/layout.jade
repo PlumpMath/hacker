@@ -6,14 +6,14 @@ body
     header.main-header
       a.nav-link.root(href="/") root
       {{#if currentUser}}
-        a.nav-link.logout(href="#") logout
-        a.nav-link(href="/hackers/{{currentUser}}") {{currentUser.username}}
+        a.nav-link.logout(href="/logout") logout
+        a.nav-link(href="/hackers/{{currentUser.username}}") {{currentUser.username}}
       {{else}}
         a.nav-link(href="/login") login
       {{/if}}
   
     .wrapper
-      {{renderPage}}
+      {{#isolate}} {{renderPage}} {{/isolate}}
   
     footer.main-footer
       a.me(href="http://polyrhythm.github.io", target="_blank") polyrhythm

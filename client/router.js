@@ -1,13 +1,36 @@
+var navigateTo = function(path) {
+  Meteor.Router.to(path);
+};
+
+var signout = function() {
+  Meteor.logout(function(err) {
+    if (err) {
+      console.log(err);
+    }
+    Meteor.navigateTo('/');
+  });
+};
+
 Meteor.Router.add({
   '/': 'landingPage',
   '/login': 'loginPage',
-  '/signup': 'signupPage'
+  '/signup': 'signupPage',
+  '/hackers/:hacker': function(hacker) {
+    if (Meteor.users.findOne({ username: hacker })) {
+      Session.set("hacker", hacker);
+      return "hacker";
+    }
+    else return "404";
+  },
+  '/logout': function() {
+    signout();
+  }
 });
 
 Meteor.Router.filters({
   requireLogin: function(page) {
     if (Meteor.loggingIn()) {
-      return 'loadingPage';
+      return "loading";
     } else if (Meteor.user()) {
       return page;
     } else {
@@ -16,4 +39,6 @@ Meteor.Router.filters({
   }
 });
 
-Meteor.Router.filter('requireLogin')
+Meteor.Router.filter('requireLogin', {
+  except:['loginPage', 'signupPage', 'landingPage']
+});

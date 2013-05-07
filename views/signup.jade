@@ -8,6 +8,7 @@ template(name="signupPage")
           type="text"
           placeholder="identify yourself"
           required
+          autofocus="autofocus"
         )
       .field
         label.signup-label(for="email") >
@@ -28,4 +29,4 @@ template(name="signupPage")
   
       .submit
         button.signup-submit(type="submit", disabled) register
-      button.signup-submit.valid(type="submit") register
+        button.signup-submit.valid(type="submit") register
