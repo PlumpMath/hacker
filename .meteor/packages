@@ -8,6 +8,6 @@ insecure
 preserve-inputs
 stylus
 coffeescript
-ng
-blade
 accounts-password
+router
+jade-handlebars

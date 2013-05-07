@@ -1,0 +1,31 @@
+template(name="signupPage")
+  .signup(ng-controller="SignupCtrl")
+    form.signup-form(method="post")
+      .field
+        label.signup-label(for="user") >
+        input.signup-input#user(
+          name="username"
+          type="text"
+          placeholder="identify yourself"
+          required
+        )
+      .field
+        label.signup-label(for="email") >
+        input.signup-input#email(
+          name="email"
+          type="email"
+          placeholder="provide your email"
+          required
+        )
+      .field
+        label.signup-label(for="passphrase") >
+        input.signup-input#passphrase(
+          name="password"
+          type="password"
+          placeholder="choose passphrase"
+          required
+        )
+  
+      .submit
+        button.signup-submit(type="submit", disabled) register
+      button.signup-submit.valid(type="submit") register

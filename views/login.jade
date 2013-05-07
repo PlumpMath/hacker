@@ -1,0 +1,23 @@
+template(name="loginPage")
+  .login(ng-controller="LoginCtrl")
+    form.login-form(method="post")
+      .field
+        label.login-label(for="user") >
+        input.login-input#user(
+          name="username"
+          type="text"
+          placeholder="username"
+        )
+      .field
+        label.login-label(for="password") >
+        input.login-input#password(
+          name="password"
+          type="password"
+          placeholder="passphrase"
+        )
+  
+      .submit
+        button.login-submit(type="submit") login
+  
+      .new.cf
+        a.signup-redirect(href="/signup") new? sign up

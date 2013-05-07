@@ -4,7 +4,7 @@
     "branch": "master"
   },
   "packages": {
-    "ng": {},
-    "blade": {}
+    "router": {},
+    "jade-handlebars": {}
   }
 }

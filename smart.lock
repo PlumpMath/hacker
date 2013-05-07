@@ -6,19 +6,23 @@
   },
   "dependencies": {
     "basePackages": {
-      "ng": {},
-      "blade": {}
+      "router": {},
+      "jade-handlebars": {}
     },
     "packages": {
-      "ng": {
-        "git": "https://github.com/olanod/ng-meteor.git",
-        "tag": "v0.1.1",
-        "commit": "d8401f51e439dd726473acc59dd0ae0ccf884b6c"
+      "router": {
+        "git": "https://github.com/tmeasday/meteor-router.git",
+        "tag": "v0.5.1",
+        "commit": "32e377c7703bb119acccc859fc7296882903cbe7"
       },
-      "blade": {
-        "git": "https://github.com/bminer/meteor-blade.git",
-        "tag": "v3.2.6meteor1",
-        "commit": "f0810fd031781c84a9b5a14fd84c5b9d060ab336"
+      "jade-handlebars": {
+        "git": "https://github.com/SimonDegraeve/meteor-jade-handlebars.git",
+        "branch": "master"
+      },
+      "page-js-ie-support": {
+        "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
+        "tag": "v1.3.5",
+        "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
       }
     }
   }
