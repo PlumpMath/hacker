@@ -6,6 +6,7 @@
   "packages": {
     "router": {},
     "jade-handlebars": {},
-    "parsleyjs": {}
+    "parsleyjs": {},
+    "gravatar": {}
   }
 }

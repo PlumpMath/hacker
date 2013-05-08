@@ -17,8 +17,8 @@ Meteor.Router.add({
   '/signup': 'signupPage',
   '/hackers/:hacker': function(hacker) {
     if (Meteor.users.findOne({ username: hacker })) {
-      Session.set("hacker", hacker);
-      return "hacker";
+      Session.set("hacker", Meteor.users.findOne({ username: hacker }));
+      return "hackerPage";
     }
     else return "404";
   },

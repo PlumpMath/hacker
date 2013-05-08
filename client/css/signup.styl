@@ -44,12 +44,30 @@
   width: 100%
   text-align: left
   overflow: hidden
+  position: relative
+
+  &.github, &.twitter
+    background: rgba(255,255,0,0.2)
+    margin-top: 20px
+
+  &.twitter
+    // not now
+    display: none
     
   &:hover
     background: rgba(0,255,0,0.1)
+
+    .login-icon
+      color: rgba(255,0,255,0.3)
 
 .new, .submit
   margin-top: 40px
   max-width: 500px
   .signup-redirect
     font-size: 1.5em
+
+.login-icon
+  font-family: 'login-icons'
+  position: absolute
+  right: 15px
+  top: 8px

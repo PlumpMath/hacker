@@ -18,7 +18,8 @@ template(name="loginPage")
         )
   
       .submit
-        button.login-submit login
+        a.login-submit login
+        a.login-submit.github login with your github <span class="login-icon">g</span>
   
       .new.cf
         a.signup-redirect(href="/signup") new? sign up
