@@ -7,7 +7,8 @@
   "dependencies": {
     "basePackages": {
       "router": {},
-      "jade-handlebars": {}
+      "jade-handlebars": {},
+      "parsleyjs": {}
     },
     "packages": {
       "router": {
@@ -18,6 +19,11 @@
       "jade-handlebars": {
         "git": "https://github.com/SimonDegraeve/meteor-jade-handlebars.git",
         "branch": "master"
+      },
+      "parsleyjs": {
+        "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
+        "tag": "v0.1.0",
+        "commit": "5ec267dcc1af252774a23dfc8b0c9c495fe2a8cb"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

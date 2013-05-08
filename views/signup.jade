@@ -1,13 +1,15 @@
 template(name="signupPage")
-  .signup(ng-controller="SignupCtrl")
-    form.signup-form(method="post")
+  .signup
+    form.signup-form(data-validate="parsley", novalidate)
       .field
         label.signup-label(for="user") >
         input.signup-input#user(
           name="username"
           type="text"
           placeholder="identify yourself"
-          required
+          data-trigger="keyup"
+          data-rangelength="[3,18]"
+          data-required="true"
           autofocus="autofocus"
         )
       .field
@@ -16,17 +18,20 @@ template(name="signupPage")
           name="email"
           type="email"
           placeholder="provide your email"
-          required
+          data-trigger="keyup"
+          data-required="true"
+          data-type="email"
         )
       .field
-        label.signup-label(for="passphrase") >
-        input.signup-input#passphrase(
+        label.signup-label(for="password") >
+        input.signup-input#password(
           name="password"
           type="password"
-          placeholder="choose passphrase"
-          required
+          placeholder="choose password"
+          data-trigger="keyup"
+          data-rangelength="[6,20]"
+          data-required="true"
         )
-  
-      .submit
-        button.signup-submit(type="submit", disabled) register
-        button.signup-submit.valid(type="submit") register
+    
+    .submit
+      a.signup-submit register

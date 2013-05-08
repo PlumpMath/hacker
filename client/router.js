@@ -7,7 +7,7 @@ var signout = function() {
     if (err) {
       console.log(err);
     }
-    Meteor.navigateTo('/');
+    navigateTo('/login');
   });
 };
 

@@ -11,3 +11,5 @@ coffeescript
 accounts-password
 router
 jade-handlebars
+parsleyjs
+jquery
