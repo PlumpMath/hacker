@@ -13,6 +13,5 @@ router
 jade-handlebars
 parsleyjs
 jquery
-gravatar
 accounts-github
 accounts-twitter
