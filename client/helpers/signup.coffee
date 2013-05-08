@@ -1,5 +1,9 @@
 Meteor.startup ->
   Template.signupPage.events =
+
+    # initial click on input
+    'focus .signup-input': ->
+      $('.signup-form').parsley()
   
     # github signup
     'mousedown .github': ->
