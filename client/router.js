@@ -1,13 +1,9 @@
-var navigateTo = function(path) {
-  Meteor.Router.to(path);
-};
-
 var signout = function() {
   Meteor.logout(function(err) {
     if (err) {
       console.log(err);
     }
-    navigateTo('/');
+    Meteor.Router.to('/');
   });
 };
 

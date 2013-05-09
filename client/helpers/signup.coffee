@@ -11,14 +11,16 @@ Meteor.startup ->
         requestPermissions: ['user', 'public_repo']
       }, (err) ->
         if err
-          console.log err
+          Session.set 'error', err
+          return Meteor.Router.to '/signup'
         Meteor.Router.to '/hackers/' + username
 
     # twitter signup
     'mousedown .twitter': ->
       Meteor.loginWithTwitter {}, (err) ->
         if err
-          console.log err
+          Session.set 'error', err
+          return Meteor.Router.to '/signup'
         Meteor.Router.to '/hackers/' + username
 
     # local signup
@@ -35,6 +37,7 @@ Meteor.startup ->
           about: ""
           tools: []
       }, (err) ->
-        if (err)
-          console.log err
+        if err
+          Session.set 'error', err
+          return Meteor.Router.to '/signup'
         Meteor.Router.to '/hackers/' + username

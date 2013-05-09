@@ -17,5 +17,6 @@ Meteor.startup ->
 
       Meteor.loginWithPassword username, password, (err) ->
         if (err)
-          return console.log err
-        Meteor.Router.to '/hackers/' + username
+          Session.set('error', err)
+          return Meteor.Router.to '/login'
+        Meteor.Router.to '/'
