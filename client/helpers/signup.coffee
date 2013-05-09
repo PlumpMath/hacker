@@ -31,6 +31,9 @@ Meteor.startup ->
         username: username
         email: email
         password: password
+        profile:
+          about: ""
+          tools: []
       }, (err) ->
         if (err)
           console.log err

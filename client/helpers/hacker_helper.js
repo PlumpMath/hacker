@@ -5,18 +5,26 @@ Handlebars.registerHelper('hacker', function(input) {
 
 // tools
 Handlebars.registerHelper('hacker_tools', function(input) {
-  var html = "<ul>";
-  var tools = Session.get('hacker').profile.tools;
-  for (var i = 0; i < tools.length; i++) {
-    html += '<li class="profile-tool">' + tools[i] + '</li>';
+  if (Session.get("hacker").profile.tools) {
+    var html = "<ul>";
+    var tools = Session.get('hacker').profile.tools;
+    for (var i = 0; i < tools.length; i++) {
+      html += '<li class="profile-tool">' + tools[i] + '</li>';
+    }
+    html += "</ul>";
+    return html;
+  } else {
+    return "";
   }
-  html += "</ul>";
-  return html;
 });
 
 // about
 Handlebars.registerHelper('hacker_about', function(input) {
-  return Session.get("hacker").profile.about;
+  if (Session.get("hacker").profile.about) {
+    return Session.get("hacker").profile.about;
+  } else {
+    return "";
+  }
 });
 
 // load partials based on navigation tab clicks
