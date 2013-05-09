@@ -7,14 +7,15 @@ var signout = function() {
     if (err) {
       console.log(err);
     }
-    navigateTo('/login');
+    navigateTo('/');
   });
 };
 
 Meteor.Router.add({
-  '/': 'landingPage',
+  '/': 'hackersPage',
   '/login': 'loginPage',
   '/signup': 'signupPage',
+  '/hackers': 'hackersPage',
   '/hackers/:hacker': function(hacker) {
     if (Meteor.users.findOne({ username: hacker })) {
       Session.set("hacker", Meteor.users.findOne({ username: hacker }));
@@ -34,7 +35,7 @@ Meteor.Router.filters({
     } else if (Meteor.user()) {
       return page;
     } else {
-      return 'loginPage';
+      return 'landingPage';
     }
   }
 });

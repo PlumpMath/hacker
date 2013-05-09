@@ -1,6 +1,6 @@
 template(name="hackerPage")
   .profile-container
-    h1.profile-name hackers/<strong>{{hacker}}</strong>
+    h1.profile-name <a href="/hackers">hackers</a>/<strong>{{hacker}}</strong>
 
     .profile-nav-container
       ul.profile-nav-links.cf
@@ -12,12 +12,13 @@ template(name="hackerPage")
 
 template(name="profileAbout")
   .profile-info-container.about
-    h2 HOLY HELL THE ABOUT PAGE
+    .tools-container
+      {{{hacker_tools}}}
+    .about-container
+      p.hacker-about {{{hacker_about}}}
 
 template(name="profileCodes")
   .profile-info-container.codes
-    h2 HOLY HELL THE CODES PAGE
 
 template(name="profileBlog")
   .profile-info-container.blog
-    h2 HOLY HELL THE BLOG PAGE

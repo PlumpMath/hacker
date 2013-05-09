@@ -1,7 +1,25 @@
+// name
 Handlebars.registerHelper('hacker', function(input) {
   return Session.get("hacker").username;
 });
 
+// tools
+Handlebars.registerHelper('hacker_tools', function(input) {
+  var html = "<ul>";
+  var tools = Session.get('hacker').profile.tools;
+  for (var i = 0; i < tools.length; i++) {
+    html += '<li class="profile-tool">' + tools[i] + '</li>';
+  }
+  html += "</ul>";
+  return html;
+});
+
+// about
+Handlebars.registerHelper('hacker_about', function(input) {
+  return Session.get("hacker").profile.about;
+});
+
+// load partials based on navigation tab clicks
 Meteor.startup(function() {
   Session.set('active_section', 'profileAbout');
 
