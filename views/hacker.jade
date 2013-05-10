@@ -1,24 +1,28 @@
 template(name="hackerPage")
   .page-container
-    h1.page-header <a href="/hackers">hackers</a>/<strong>{{hacker}}</strong>
+    h1.page-header /<a href="/hackers">hackers</a>/<strong>{{hacker}}</strong>
 
     .profile-nav-container
       ul.profile-nav-links.cf
         li.profile-nav-link.about about
-        li.profile-nav-link.codes codes
+        li.profile-nav-link.code code
         li.profile-nav-link.blog blog
 
     {{{profile_section}}}
 
 template(name="profileAbout")
   .profile-info-container.about
-    .tools-container
-      {{{hacker_tools}}}
-    .about-container
-      p.hacker-about {{{hacker_about}}}
+    .half
+      .container.about
+        h2.about-header about
+        p.hacker-about {{{hacker_about}}}
+      .container.tool.cf
+        h2.about-header tools
+        {{{hacker_tools}}}
 
-template(name="profileCodes")
-  .profile-info-container.codes
+template(name="profileCode")
+  .profile-info-container.code
 
 template(name="profileBlog")
   .profile-info-container.blog
+    {{{hacker_blog}}}

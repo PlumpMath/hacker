@@ -1,3 +1,5 @@
+@import nib
+
 // nav
 .profile-nav-container
   display: inline-block
@@ -13,12 +15,12 @@
   color: black
   &.about
     background: rgba(255,255,0,0.3)
-  &.codes
+  &.code
     background: rgba(0,255,0,0.3)
   &.blog
     background: rgba(0,255,255,0.3)
 
-// profile section
+// profile main
 .profile-info-container
   margin-top: 0.5em
   width: 100%
@@ -26,7 +28,57 @@
   padding-top: 2em
   &.about
     border-top: 0.75em solid rgba(255,255,0,0.3)
-  &.codes
+  &.code
     border-top: 0.75em solid rgba(0,255,0,0.3)
   &.blog
     border-top: 0.75em solid rgba(0,255,255,0.3)
+
+// profile about
+.half
+  width: 50%
+  float: left
+  .container
+    margin-bottom: 2em
+
+.about-header
+  background: rgba(50,50,50,0.1)
+  margin-bottom: 0.2em
+
+.profile-tool
+  display: inline-block
+  padding: 0.3em 0.6em
+  border: 2px solid rgba(200,200,200,0.2)
+  margin: 0.5em 0.5em 0.5em 0
+  float: left
+  cursor: pointer
+  &:hover
+    background: rgba(255,255,0,0.1)
+    border-color: rgba(255,255,0,0.1)
+
+// profile blog
+.post
+  display: inline-block
+  padding: 1em
+  float: left
+  margin: 1em 1em 1em 0
+  width: 250px
+  height: 150px
+  position: relative
+  border: 3px solid rgba(200,200,200,0.1)
+  cursor: pointer
+  &:hover
+    border: 3px solid rgba(0,255,255,0.1)
+
+.blog-header
+  background: rgba(50,50,50,0.1)
+  margin-bottom: 0.5em
+
+.post-date
+  font-size: 0.6em
+  color: gray
+  position: absolute
+  bottom: 1em
+  left: 1em
+
+.post-title, .post-body
+  margin-bottom: 0.3em
