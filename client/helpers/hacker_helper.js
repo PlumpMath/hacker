@@ -42,13 +42,7 @@ Handlebars.registerHelper('hacker_blog', function(input) {
       html += '</li>';
     }
     html += '</ul>';
-    var header_html = '<h2 class="blog-header">';
-    if (current_blog.title) {
-      header_html += current_blog.title + '</h2>';
-    } else {
-      header_html += hacker.username + '\'s blog</h2>';
-    }
-    return header_html + html;
+    return html;
   } else {
     return '<p class="no-blog">no posts</p>';
   };
