@@ -19,8 +19,7 @@
       },
       "jade-handlebars": {
         "git": "https://github.com/SimonDegraeve/meteor-jade-handlebars.git",
-        "tag": "v0.2.7",
-        "commit": "82f6f9ac43a68ffabe1d9b9620be2a4ca6790b56"
+        "branch": "master"
       },
       "parsleyjs": {
         "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
