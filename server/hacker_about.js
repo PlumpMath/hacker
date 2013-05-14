@@ -1,5 +1,10 @@
 Meteor.methods({
   createDescription: function(text) {
-    return Meteor.users.update({ _id: Meteor.user()._id }, {$set:{ "profile.about": text }});
+    if (text == "") {
+      throw new Meteor.Error(204, 'must have content to change description');
+    } else {
+      console.log('replacing ' + Meteor.user().profile.about + ' with ' + text);
+      return Meteor.users.update({ _id: this.userId}, {$set:{ "profile.about": text }});
+    }
   }
 });

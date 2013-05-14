@@ -48,6 +48,17 @@ Handlebars.registerHelper('hacker_blog', function(input) {
   };
 });
 
+// editAbout
+Meteor.startup(function() {
+  Template.editAbout.events = {
+    'mousedown .submit-edit-about': function() {
+      var descriptionText = $('.edit-about').val();
+      Meteor.call("createDescription", descriptionText);
+      return Session.set('active_section', 'profileAbout');
+    }
+  };
+});
+
 // load partials based on navigation tab clicks
 Meteor.startup(function() {
   Session.set('active_section', 'profileAbout');
@@ -70,10 +81,9 @@ Meteor.startup(function() {
     'mousedown .profile-nav-link.blog': function() {
       Session.set('active_section', 'profileBlog');
     },
-    // mousedown about-edit
-    'mousedown .profile-nav-link.blog': function() {
-      var descriptionText = $('.about-edit-input').val();
-      Meteor.createDescription(descriptionText);
-    }    
-  } 
+    // mousedown editAbout
+    'mousedown .edit-link.about': function() {
+      Session.set('active_section', 'editAbout');
+    }
+  }
 });

@@ -20,7 +20,7 @@ template(name="profileAbout")
         h2.about-header tools
         {{{hacker_tools}}}
       .edit
-        a.edit edit your shit
+        a.edit-link.about edit your shit
 
 template(name="profileCode")
   .profile-info-container.code
@@ -28,3 +28,10 @@ template(name="profileCode")
 template(name="profileBlog")
   .profile-info-container.blog
     {{{hacker_blog}}}
+
+template(name="editAbout")
+  .profile-info-container.about
+    .half
+      input.edit-about(type="textarea")
+      a.submit-edit-about save your shit
+
