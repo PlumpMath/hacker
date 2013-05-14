@@ -69,6 +69,11 @@ Meteor.startup(function() {
     // mousedown blog
     'mousedown .profile-nav-link.blog': function() {
       Session.set('active_section', 'profileBlog');
-    }
-  }
+    },
+    // mousedown about-edit
+    'mousedown .profile-nav-link.blog': function() {
+      var descriptionText = $('.about-edit-input').val();
+      Meteor.createDescription(descriptionText);
+    }    
+  } 
 });
