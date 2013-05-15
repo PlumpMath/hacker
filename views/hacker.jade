@@ -31,8 +31,9 @@ template(name="profileBlog")
 
 template(name="editAbout")
   .profile-info-container.about
-    .half
-      input.edit-about(type="textarea", type="about")
-      input.edit-tools(type="textarea", placeholder="tools")
+    .edit-container
+      input.edit-about(type="textarea", type="about", placeholder="description")
+      label.edit-label.tools(for="tools") put in your tools separated by a comma you turkey
+      input#tools.edit-tools(type="textarea", placeholder="tools")
       a.submit-edit-about save your shit
 
