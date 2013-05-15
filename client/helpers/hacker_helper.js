@@ -52,8 +52,14 @@ Handlebars.registerHelper('hacker_blog', function(input) {
 Meteor.startup(function() {
   Template.editAbout.events = {
     'mousedown .submit-edit-about': function() {
+      // description
       var descriptionText = $('.edit-about').val();
       Meteor.call("createDescription", descriptionText);
+      // tools
+      var toolInput = $('.edit-tools').val();
+      var toolList = toolInput.split(',');
+      Meteor.call("createTools", toolList);
+      // return to about partial
       return Session.set('active_section', 'profileAbout');
     }
   };
