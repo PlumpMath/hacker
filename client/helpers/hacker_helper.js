@@ -65,6 +65,18 @@ Meteor.startup(function() {
   };
 });
 
+// editBlog
+Meteor.startup(function() {
+  Template.editBlog.events = {
+    'mousedown .submit-edit-blog': function() {
+      var titleText = $('.edit-title').val();
+      var bodyText = $('.edit-body').val();
+      Meteor.call('createBlogPost', titleText, bodyText);
+      return Session.set('active_section', 'profileBlog');
+    }
+  };
+});
+
 // load partials based on navigation tab clicks
 Meteor.startup(function() {
   Session.set('active_section', 'profileAbout');
@@ -90,6 +102,10 @@ Meteor.startup(function() {
     // mousedown editAbout
     'mousedown .edit-link.about': function() {
       Session.set('active_section', 'editAbout');
+    },
+    // mousedown editBlog
+    'mousedown .edit-link.blog': function() {
+      Session.set('active_section', 'editBlog');
     }
   }
 });

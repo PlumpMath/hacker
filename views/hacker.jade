@@ -28,6 +28,8 @@ template(name="profileCode")
 template(name="profileBlog")
   .profile-info-container.blog
     {{{hacker_blog}}}
+  .edit
+    a.edit-link.blog create a new fuckin blog post
 
 template(name="editAbout")
   .profile-info-container.about
@@ -37,3 +39,9 @@ template(name="editAbout")
       input#tools.edit-tools(type="textarea", placeholder="tools")
       a.submit-edit-about save your shit
 
+template(name="editBlog")
+  .profile-info-container.blog
+    .edit-container
+      input.edit-title(type="text", placeholder="title")
+      input.edit-body(type="textarea")
+      a.submit-edit-blog save your blog post
