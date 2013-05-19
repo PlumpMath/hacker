@@ -7,7 +7,7 @@ Meteor.methods({
       return Blogs.insert({ creator: hacker, posts: [ { title: title, body: body, date: new Date() }]});
     } else {
       console.log('creating post');
-      return Blogs.update({creator: hacker}, {$push:{posts:[ { title: title, body: body, date: new Date() }]}});
+      return Blogs.update({creator: hacker}, {$push:{posts: { title: title, body: body, date: new Date() }}});
     }
   }
 });
