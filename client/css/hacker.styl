@@ -88,3 +88,25 @@
   position: relative
   .edit-label
     width: 100%
+
+// edit blog
+.blog .edit-container
+  input
+    border: none
+    width: 100%
+    position: relative
+    padding-left: 15px
+    &:focus
+      outline: none
+    &.edit-title
+      font-size: 3em
+      padding-bottom: 20px
+      border-bottom: 2px solid black
+    &.edit-body
+      font-size: 1em
+      margin: 10px 0
+  .submit-edit-blog
+    cursor: pointer
+    background: rgba(255,255,0,0.1)
+    &:hover
+      background: rgba(255,255,0,0.3)

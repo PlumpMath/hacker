@@ -42,6 +42,6 @@ template(name="editAbout")
 template(name="editBlog")
   .profile-info-container.blog
     .edit-container
-      input.edit-title(type="text", placeholder="title")
-      input.edit-body(type="textarea")
+      input#title.edit-title(type="text", placeholder="title", autofocus="autofocus")
+      input#body.edit-body(type="textarea")
       a.submit-edit-blog save your blog post
