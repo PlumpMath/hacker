@@ -101,11 +101,19 @@ Meteor.startup(function() {
     },
     // mousedown editAbout
     'mousedown .edit-link.about': function() {
-      Session.set('active_section', 'editAbout');
+      if (Session.get("hacker").username == Meteor.user().username) {
+        Session.set('active_section', 'editAbout');
+      } else {
+        alert("YOU CAN'T DO THAT");
+      }
     },
     // mousedown editBlog
     'mousedown .edit-link.blog': function() {
-      Session.set('active_section', 'editBlog');
+      if (Session.get("hacker").username == Meteor.user().username) {
+        Session.set('active_section', 'editBlog');
+      } else {
+        alert("YOU CAN'T DO THAT");
+      }
     }
   }
 });
