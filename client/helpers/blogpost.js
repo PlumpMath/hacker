@@ -5,3 +5,8 @@ Handlebars.registerHelper('postTitle', function() {
 Handlebars.registerHelper('postBody', function() {
   return Session.get('currentPost').body;
 });
+
+Handlebars.registerHelper('author', function() {
+  var author = Session.get('currentBlog').creator;
+  return '<a href="/hackers/' + author + '">' + author + '</a>'
+});

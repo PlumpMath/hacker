@@ -23,6 +23,7 @@ Meteor.Router.add({
     console.log(this.params);
     var blog = Blogs.findOne({ creator: hacker });
     if (blog) {
+      Session.set("currentBlog", blog);
       Session.set("currentPost", blog.posts[postId]);
       return "blogPostPage";
     } else return "404";
