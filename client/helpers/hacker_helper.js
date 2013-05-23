@@ -32,14 +32,15 @@ Handlebars.registerHelper('hacker_blog', function(input) {
   var hacker = Session.get("hacker").username;
   var current_blog = Blogs.findOne({creator: hacker});
   if (current_blog) {
-    var posts = current_blog.posts
+    var posts = current_blog.posts;
     var html = '<ul class="blog-posts">';
     for (var i = 0; i < posts.length; i++) {
+      html += '<a href="/posts/' + hacker + '/' + i + '">';
       html += '<li class="post">';
       html += '<h3 class="post-title">' + posts[i].title + '</h3>';
       html += '<p class="post-body">' + posts[i].body.substr(0,100) +  '...</p>';
       html += '<p class="post-date">' + posts[i].date + '</p>';
-      html += '</li>';
+      html += '</li></a>';
     }
     html += '</ul>';
     return html;
