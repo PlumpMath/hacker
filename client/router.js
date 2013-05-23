@@ -19,6 +19,14 @@ Meteor.Router.add({
     }
     else return "404";
   },
+  '/posts/:hacker/:postId': function(hacker, postId) {
+    console.log(this.params);
+    var blog = Blogs.findOne({ creator: hacker });
+    if (blog) {
+      Session.set("currentPost", blog.posts[postId]);
+      return "blogPostPage";
+    } else return "404";
+  },
   '/logout': function() {
     signout();
   }
