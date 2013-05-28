@@ -10,3 +10,7 @@ Handlebars.registerHelper('author', function() {
   var author = Session.get('currentBlog').creator;
   return '<a href="/hackers/' + author + '">' + author + '</a>'
 });
+
+Handlebars.registerHelper('date', function() {
+  return Session.get('currentPost').date;
+});
